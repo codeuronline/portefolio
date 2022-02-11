@@ -1,0 +1,2 @@
+RewriteEngine on 
+RewriteRule ^(.*) index.phph?p=$1
