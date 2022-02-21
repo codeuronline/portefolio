@@ -1,2 +1,2 @@
 RewriteEngine on 
-RewriteRule ^(.*) index.phph?p=$1
+RewriteRule ^(.*) index.php?p=$1

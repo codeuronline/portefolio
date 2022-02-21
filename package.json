@@ -1,0 +1,22 @@
+{
+  "name": "portefolio",
+  "version": "1.0.0",
+  "description": "php# Projet Portfolio - Back-Office",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch public/scss/style.scss:public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeuronline/portefolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeuronline/portefolio/issues"
+  },
+  "homepage": "https://github.com/codeuronline/portefolio#readme",
+  "dependencies": {
+    "sass": "^1.49.8"
+  }
+}
