@@ -9,42 +9,67 @@ define('ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_NAME'])); ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
-    <title>Accueil</title>
+    <title>hello</title>
 </head>
-<!--<div class="plant-grid">
-    <div class="plant-grid1">
-        <h1><a href=" addproject.php" class="">Ajouter un projet</a></h1>
-    </div>
-    <div class="plant-grid2">
-        <h1><a href="" class="">Compétences</a></h1>
-    </div>
-    <div class="plant-grid3">
-        <h1><a href="" class="">Projet</a></h1>
-    </div>
-</div>-->
 
 <body>
-    <div class="box">
-        <a href="">
-            <div class="box__face--back"> Présentation
+    <header>
+        <nav>
+            <button><a class='active' href="presentation.php">Présentation</button></a>
+            <button><a href="projets.php"> Mes Projets</a></button>
+            <button><a href="competences.php">Mes Compétences</a></button>
+            <button><a href="contacter.php">Me Contacter</a></button>
+            <button><a href="admin.php">Admin</a></button>
+        </nav>
+    </header>
+    <div class=" container">
+        <div class="cube">
+            <div class="face front">
+                <a href="presentation.php">
+                    <div class="face">
+                        Présentation
+                    </div>
+                </a>
             </div>
-        </a>
-        <a href="">
-            <div class="box__face--front">Présentation
-        </a>
-        <a href="">
-            <div class="box__face--left">Réalisations
-        </a>
+            <div class="face back">
+                <a href="projets.php">
+                    <div class="face">
+                        Mes Projets
+                    </div>
+                </a>
+            </div>
+            <div class="face right">
+                <a href="competences.php">
+                    <div class="face">
+                        Mes Compétences
+                    </div>
+                </a>
+            </div>
+
+            <div class="face left">
+                <a href="contacter.php">
+                    <div class="face">
+                        Me Contacter
+                    </div>
+                </a>
+            </div>
+            <div class="face top">
+                <a href="admin.php">
+                    <div class="face">
+
+                        Admin
+                    </div>
+                </a>
+            </div>
+            <div class="face bottom">
+                <a href="projets.php">
+                    <div class="face">
+                        Mes Projets
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
-    <a href="">
-        <div class="box__face--right">Réalisation</div>
-    </a>
-    <a href="">
-        <div class="box__face--top">Compétences </div>
-    </a>
-    <a href="">
-        <div class="box__face--bottom"> Contact</div>
-    </a>
 </body>
 
 </html>

@@ -1,16 +1,192 @@
+$width:300px;
+$height:300px;
 *,*::after,*::before{
-  color:white;
-  font-size: large;
-  text-decoration: none;
   margin:0;
   padding:0;
+  box-sizing: border-box;
+  color: white;
 }
-body{
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
+
+a,a ::after{
+  text-decoration: none;
+  color: white;
 }
-.box{
+a:hover{
+  text-decoration: none;
+  color: brown;
+}
+.container{
+   width: $width;
+  height: $height;
+  perspective: 1000px;
+  margin:100px auto 0;
+}
+.containerForm{
+background-image: url(../../assets/upload/6.jpg);
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+}
+input[type='file']{
+  display:block;
+}
+form{
+  background-color: url(../../assets/upload/4.jpg);
+}
+.droite{
+  display: flex;
+  background-color: rgb(20, 20, 19);
+  flex-direction: column;
+  justify-content: end;
+  align-items:center;
+  #description{
+    justify-content: end;
+    align-items:end;
+      
+  }
+}
+.gauche{
+  background-color: aqua;
+  display: flex;;
+  background-color: rgb(24, 24, 22);
+  flex-direction: column;
+justify-content: start;
+align-items: center;
+}
+fieldset{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.cube{
+  font-size: 30px;
+  color: white;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 15s infinite linear;
+}
+
+button{
+  border:2px solid white;
+  border-radius: 5px;
+  color: white;
+  height:30px;
+  background-image: url(../../assets/upload/2.jpg);
+  cursor: pointer;
+  .active{
+    color: brown;
+    text-decoration: none;
+  }
+  :hover{
+    color:brown;
+    border:2px solid white;
+    text-decoration: none;
+    }
+}
+/*button .active{
+  color: brown;
+  text-decoration: none;
+}
+button :hover{
+color:blueviolet;
+border:2px solid white;
+text-decoration: none;
+}*/
+label{
+  text-align: center;;
+}
+.face{
+  position: absolute;
+  width: $width;
+  height: $height;
+  padding-top:60px;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  text-align: center;
+  :hover{
+    color:brown;
+  }
+}
+
+.top{
+  text-align: center;
+  background-image: url(../../assets/upload/2.jpg);
+  transform: rotateX(90deg) translateZ(150px);
+}
+
+.bottom{
+  text-align: center;
+  background-image: url(../../assets/upload/6.jpg);
+  transform: rotateX(-90deg) translateZ(150px);
+}
+.right{
+  text-align: center;
+  background-image: url(../../assets/upload/3.jpg);
+  transform:  rotateY(90deg) translateZ(150px);
+}
+
+.left{
+  text-align: center;
+  background-image: url(../../assets/upload/5.jpg);
+  transform:rotateY(-90deg) translateZ(150px);
+}
+.front{
+  text-align: center;
+  background-image: url(../../assets/upload/1.jpg);
+  transform:rotateX(90deg) translateZ(150px);
+}
+.back{
+  text-align: center;
+  background-image: url(../../assets/upload/6.jpg);
+  transform: rotateX(0deg) translateZ(150px); 
+}
+
+header{
+  align-items: center;
+  justify-content: space-around;
+  display:flex;
+  margin-top:0px;
+  height:45px;
+  width:100%;
+  background-image: url(../../assets/upload/6.jpg);
+}
+
+nav{
+justify-content: center;
+align-items: center;;
+}
+
+footer{
+margin-bottom: 0px;
+width:100%;
+height:45px;
+}
+
+@keyframes spin {
+  from{
+    transform:rotateX(0deg) rotateY(0);
+  }
+  to{
+    transform: rotateX(360deg)rotateY(360deg)
+  }
+  
+}
+@media screen and (max-width:480px){
+  
+  $width:150px; 
+  $height:150px;
+  
+}
+@media screen and (max-width:900px){
+  
+  $width:300px; 
+  $height:300px;
+  
+}
+/*.box{
   --width:40vmin;
   --height:40vmin;
   --depth: 45vmin;
