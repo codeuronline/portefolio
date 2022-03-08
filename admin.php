@@ -20,12 +20,10 @@
 
 <body>
     <div class="container">
-
         <form action="">
             <div class="conatainerForm">
                 <fieldset>
                     <legend color="black">Projet dans la BD</legend>
-
                     <div class="gauche">
                         <label for="nom">Nom:</label>
                         <input type="text" placeholder="Nom du projet">
@@ -39,12 +37,10 @@
                         <label for="description">Description:</label>
                         <textarea name="description" id="description" cols="30" rows="10"></textarea>
                     </div>
-
                 </fieldset>
             </div>
         </form> /
     </div>
 </body>
 
-</html><?php
-        ?>
+</html>
