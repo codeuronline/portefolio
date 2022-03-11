@@ -27,6 +27,21 @@ display: flex;
 flex-direction: row;
 align-items: flex-end;
 }
+
+.projet{
+  color:black;
+  border: 1px solid black;
+  width: 150px;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  
+img{width: 150px;
+  height:150px}
+    
+}
+img{width: 150px;
+height:150px}
 input[type='file']{
   display:block;
 }
@@ -53,7 +68,9 @@ form{
 justify-content: start;
 align-items: center;
 }
+
 fieldset{
+  color:black;
   display: flex;
   justify-content: space-between;
   flex-direction: row;

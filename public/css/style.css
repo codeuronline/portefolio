@@ -29,6 +29,24 @@ a:hover {
   align-items: flex-end;
 }
 
+.projet {
+  color: black;
+  border: 1px solid black;
+  width: 150px;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+}
+.projet img {
+  width: 150px;
+  height: 150px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
 input[type=file] {
   display: block;
 }
@@ -59,6 +77,7 @@ form {
 }
 
 fieldset {
+  color: black;
   display: flex;
   justify-content: space-between;
   flex-direction: row;

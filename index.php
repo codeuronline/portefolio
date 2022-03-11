@@ -15,7 +15,7 @@ define('ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_NAME'])); ?>
 <body>
     <header>
         <nav>
-            <button><a class='active' href="presentation.php">Présentation</button></a>
+            <button><a class='active' href="index.php">Présentation</button></a>
             <button><a href="projets.php"> Mes Projets</a></button>
             <button><a href="competences.php">Mes Compétences</a></button>
             <button><a href="contacter.php">Me Contacter</a></button>
