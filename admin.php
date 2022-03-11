@@ -1,11 +1,14 @@
 <?php
+require_once 'models/project.php';
+if (@$_GET['id']){
+    $newProject = new Project;
+    $projets = $newProject->select(@$_GET['id']); 
+
+}
 if (@$_POST) {
-       require_once 'models/project.php';
-       $form= $_POST; 
-       
-       if (isset($_FILES['picture']['tmp_name']) && is_uploaded_file($_FILES['picture']['tmp_name'])) {
-        //on limite a 5 le compteur
-        
+    $form = $_POST;
+    if (isset($_FILES['picture']['tmp_name']) && is_uploaded_file($_FILES['picture']['tmp_name'])) {
+           
             $picture = $_FILES['picture']['name'];
             var_dump($picture);      
             $picture_tmp = $_FILES['picture']['tmp_name'];
@@ -13,10 +16,7 @@ if (@$_POST) {
             $form['picture'] =  $picture;
             move_uploaded_file($picture_tmp, 'assets/upload/' . $form['picture']);
     }
-    var_dump($_FILES);
-    $form['created_at']= date('Ymd');
-    var_dump($form);
-    
+    $form['created_at'] = date('Ymd');
     $newproject= new Project([]);
     $newproject->add($form);
 } ?>
@@ -27,7 +27,7 @@ if (@$_POST) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="public/css/style.css">-->
+    <link rel="stylesheet" href="public/css/styleprojet.css">
     <title>ADMIN</title>
 </head>
 <header>
@@ -48,27 +48,61 @@ if (@$_POST) {
                     <legend color="black">Projet dans la BD</legend>
                     <div class="gauche">
                         <label for="title">Nom:</label>
-                        <input type="text" placeholder="Nom du projet" name="title">
+                        <input type="text" placeholder="Nom du projet" name="title" value="<?=@$projets[0]['title']?>">
                         <label for="lienlocal">Lien du site:</label>
-                        <input type="url" placeholder="lien vers le site" name="url_web">
-                        <label for="liengithub">Lien Github:</label>
-                        <input type="url" placeholder="lien vers github" name="url_github">
-                        <input type="file" name="picture" id="picture">
+                        <input type="url" placeholder="lien vers le site" name="url_web"
+                            value="<?=@$projets[0]['url_web']?>">
+                        <label for=" liengithub">Lien Github:</label>
+                        <input type="url" placeholder="lien vers github" name="url_github"
+                            value="<?=@$projets[0]['url_github']?>">
+                        <input type=" file" name="picture" id="picture">
+                        <img onchange="handleFiles()"
+                            src="assets/upload/<?=(@$projets[0]['picture']) ? @$projets[0]['picture']: "vide.jpg"?>"
+                            alt="" id="picture" name="picture">
+                        <span id="preview">
+                            <img class="preview" src="assets/upload/vide.jpg" alt="vide" srcset="">
+                        </span>
                     </div>
                     <div class="droite">
                         <label for="description">Description:</label>
-                        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                        <textarea name="description" id="description" cols="80" rows="10"
+                            value="<?=@$projets[0]['description']?>"><?=@$projets['description']?>
+                        </textarea>
+                        <input type="hidden" name="id" value="<?=@$_GET['id']?>">
                     </div>
                 </fieldset>
+                <button type=" submit">Valider</button>
+                <button type="reset">Annuler</button>
             </div>
-            <div class="containerForm">
 
-                <div class="gauche"><button type="submit">Valider</button></div>
-
-                <div class="droite"><button type="reset">Annuler</button></div>
-            </div>
         </form>
     </div>
+    <script type="text/javascript">
+    function handleFiles() {
+        var imageType = /^image\//;
+        for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+            if (!imageType.test(file.type)) {
+                alert(" veuillez sélectionner une image ");
+            } else {
+
+                preview.innerHTML = '';
+            }
+        }
+    }
+    var img = document.createElement("img");
+    img.classList.add("obj");
+    img.file = file;
+    preview.appendChild(img);
+    var reader = new FileReader();
+    reader.onload = (function(aImg) {
+        return function(e) {
+            aImg.src = e.target.result;
+        };
+    })(img);
+
+    reader.readAsDataURL(file);
+    </script>
 </body>
 
 </html>

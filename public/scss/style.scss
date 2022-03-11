@@ -16,7 +16,7 @@ a:hover{
   color: brown;
 }
 .container{
-   width: $width;
+  width: $width;
   height: $height;
   perspective: 1000px;
   margin:100px auto 0;
@@ -28,18 +28,9 @@ flex-direction: row;
 align-items: flex-end;
 }
 
-.projet{
-  color:black;
-  border: 1px solid black;
-  width: 150px;
-  height: 300px;
-  display: flex;
-  flex-direction: row;
-  
-img{width: 150px;
-  height:150px}
+
     
-}
+
 img{width: 150px;
 height:150px}
 input[type='file']{
@@ -144,7 +135,6 @@ label{
   background-image: url(../../assets/upload/3.jpg);
   transform:  rotateY(90deg) translateZ(150px);
 }
-
 .left{
   text-align: center;
   background-image: url(../../assets/upload/5.jpg);

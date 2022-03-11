@@ -3,6 +3,7 @@ require_once 'models/project.php';
 
 $newProject = new Project;
 $projets = $newProject->select();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +12,7 @@ $projets = $newProject->select();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/styleprojet.css">
     <title>Projets</title>
 </head>
 
@@ -25,18 +26,20 @@ $projets = $newProject->select();
             <button><a href="admin.php">Admin</a></button>
         </nav>
     </header>
-    <?php
-    foreach ($projets as $projet ) :?>
-    <div class='projet'>
-        <h1> <?=$projet["title"]?></h1>
-        <h2>
-            <?=$projet["description"]?>
-        </h2>
-        <img src='assets/upload/<?=$projet["picture"]?>'>
+    <div class="container">
+        <?php
+        foreach ($projets as $projet) : ?>
+        <a href="admin.php?id=<?=$projet['id']?>">
+            <div class='projet'>
+                <h1> <?= $projet["title"] ?></h1>
+                <h2>
+                    <?= $projet["description"] ?>
+                </h2>
+                <img src='assets/upload/<?= $projet["picture"] ?>'>
+            </div>
+        </a>
+        <?php endforeach; ?>
     </div>
-
-    <?php endforeach; ?>
-    ?>
 </body>
 
 

@@ -16,6 +16,7 @@ class Project {
         
         
     }
+    
     public function up($data){
         require_once 'connexion.php';
       extract($data); 
@@ -28,11 +29,13 @@ class Project {
       }
         
     }
+    
     public function del($id){
         require_once 'connexion.php';
         $sql = "DELETE FROM projects WHERE id=:$id";   
         
     }
+    
     public function select($id="*"){
         require_once 'connexion.php';
         if ($id == "*"){
