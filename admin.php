@@ -20,26 +20,30 @@
 
 <body>
     <div class="container">
-        <form action="">
+        <form method="GET" action="" enctype="multipart/form-data">
             <div class="conatainerForm">
                 <fieldset>
                     <legend color="black">Projet dans la BD</legend>
                     <div class="gauche">
-                        <label for="nom">Nom:</label>
-                        <input type="text" placeholder="Nom du projet">
-                        <label for="url_site">Lien du site:</label>
-                        <input type="url" placeholder="lien vers le site">
-                        <label for="url_github">Lien Github:</label>
-                        <input type="url" placeholder="lien vers github">
+                        <label for="title">Nom:</label>
+                        <input type="text" placeholder="Nom du projet" name="title">
+                        <label for="lienlocal">Lien du site:</label>
+                        <input type="url" placeholder="lien vers le site" name="lienlocal">
+                        <label for="liengithub">Lien Github:</label>
+                        <input type="url" placeholder="lien vers github" name="liengithub">
                         <input type="file" name="picture" id="picture">
                     </div>
                     <div class="droite">
                         <label for="description">Description:</label>
                         <textarea name="description" id="description" cols="30" rows="10"></textarea>
                     </div>
+                    <div class="gauche">
+                        <button type="submit">Valider</button>
+                        <button type="reset">Annuler</button>
+                    </div>
                 </fieldset>
             </div>
-        </form> /
+        </form>
     </div>
 </body>
 
