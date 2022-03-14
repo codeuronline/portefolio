@@ -18,10 +18,15 @@ if (@$_POST) {
     }
     $form['created_at'] = date('Ymd');
     $newproject= new Project([]);
-    $newproject->add($form);
+    
+    if (@$_POST['flag']){
+        $newProject->up($form);
+    }else{
+        $newproject->add($form);
+    }
 } ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -72,9 +77,12 @@ if (@$_POST) {
                             value="<?=@$projets[0]['description']?>"><?=@$projets['description']?>
                         </textarea>
                         <input type="hidden" name="id" value="<?=@$_GET['id']?>">
+                        <?php if (@$_GET['id']):?>
+                        <input type="hidden" name="flag" value="update">
+                        <?php endif ?>
                     </div>
                 </fieldset>
-                <button type=" submit">Valider</button>
+                <button type="submit">Valider</button>
                 <button type="reset">Annuler</button>
             </div>
 
