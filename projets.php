@@ -1,12 +1,18 @@
 <?php
+
+
 require_once 'models/project.php';
 
 $newProject = new Project;
 $projets = $newProject->select();
 
+if (@$_GET['id']){
+     $newProject->del(@$_GET['id']);   
+}
+
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -38,6 +44,7 @@ $projets = $newProject->select();
                 <img src='assets/upload/<?= $projet["picture"] ?>'>
             </div>
         </a>
+        <a href="projets.php?id=<?=$projet['id']?>">effacer</a>
         <?php endforeach; ?>
     </div>
 </body>

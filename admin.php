@@ -60,7 +60,7 @@ if (@$_POST) {
                         <label for=" liengithub">Lien Github:</label>
                         <input type="url" placeholder="lien vers github" name="url_github"
                             value="<?=@$projets[0]['url_github']?>">
-                        <div class="card1">
+                        <div class="card">
                             <label for="picture">
                                 <input class="inputimage" type="file" onchange="handleFiles(files)" id="picture"
                                     name="picture">

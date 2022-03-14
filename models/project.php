@@ -9,6 +9,7 @@ class Project {
     private $picture;
     
     public function add($data){
+        global $db;
         require_once 'connexion.php';
         extract($data);
         $sql = "INSERT INTO projects(id,title,description,picture,created_at,url_web,url_github) VALUES (NULL,?,?,?,?,?,?)";
@@ -18,25 +19,34 @@ class Project {
     }
     
     public function up($data){
+        global $db;
         require_once 'connexion.php';
-      extract($data); 
-      if (@$id){
-        $sql = "UPDATE projects SET title=?, description=?, url_web=?, url_github=?,picture=? WHERE id=?";
-        $db->prepare($sql)->execute([$title,$description, $picture, $url_web, $url_github, $id]);
-          
-      }else {
-          echo "erreur dans la mise à jour";
-      }
-        
+        extract($data); 
+        if (@$id){
+                if (@$picture) {
+                    $sql = "UPDATE projects SET title=?, description=?, url_web=?, url_github=?,picture=? WHERE id=?";
+                    $db->prepare($sql)->execute([$title,$description, $picture, $url_web, $url_github, $id]);
+                } else {
+                    $sql = "UPDATE projects SET title=?, description=?, url_web=?, url_github=? WHERE id=?";
+                    $db->prepare($sql)->execute([$title, $description, $url_web, $url_github, $id]);
+                }
+            
+        }else {
+            echo "erreur dans la mise à jour";
+        }
     }
     
     public function del($id){
+        global $db;
         require_once 'connexion.php';
-        $sql = "DELETE FROM projects WHERE id=:$id";   
+        
+        $sql = "DELETE FROM projects WHERE id=?";  
+        $db->prepare($sql)->execute([$id]); 
         
     }
     
     public function select($id="*"){
+        global $db;
         require_once 'connexion.php';
         if ($id == "*"){
             $sql = "SELECT * FROM projects";
