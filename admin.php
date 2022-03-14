@@ -55,13 +55,16 @@ if (@$_POST) {
                         <label for=" liengithub">Lien Github:</label>
                         <input type="url" placeholder="lien vers github" name="url_github"
                             value="<?=@$projets[0]['url_github']?>">
-                        <input type=" file" name="picture" id="picture">
-                        <img onchange="handleFiles()"
-                            src="assets/upload/<?=(@$projets[0]['picture']) ? @$projets[0]['picture']: "vide.jpg"?>"
-                            alt="" id="picture" name="picture">
-                        <span id="preview">
-                            <img class="preview" src="assets/upload/vide.jpg" alt="vide" srcset="">
-                        </span>
+                        <div class="card1">
+                            <label for="picture">
+                                <input class="inputimage" type="file" onchange="handleFiles(files)" id="picture"
+                                    name="picture">
+                                <span id="preview"><img class="vignette"
+                                        src="<?=(@$_projets[0]['picture'])? "assets/upload/".@$projets[0]['picture'] : "assets/upload/vide.jpg"?>"
+                                        alt=" vide" srcset="">
+                                </span>
+                            </label>
+                        </div>
                     </div>
                     <div class="droite">
                         <label for="description">Description:</label>
@@ -78,14 +81,13 @@ if (@$_POST) {
         </form>
     </div>
     <script type="text/javascript">
-    function handleFiles() {
+    function handleFiles(files) {
         var imageType = /^image\//;
         for (var i = 0; i < files.length; i++) {
             var file = files[i];
             if (!imageType.test(file.type)) {
                 alert(" veuillez sélectionner une image ");
             } else {
-
                 preview.innerHTML = '';
             }
         }

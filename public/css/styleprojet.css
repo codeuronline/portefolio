@@ -78,4 +78,8 @@ input[type=file] {
   display: none;
 }
 
+#preview {
+  display: block;
+}
+
 /*# sourceMappingURL=styleprojet.css.map */
