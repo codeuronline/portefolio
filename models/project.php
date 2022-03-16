@@ -21,18 +21,20 @@ class Project {
     public function up($data){
         global $db;
         require_once 'connexion.php';
-        extract($data); 
+        var_dump($data);
+        extract($data);
+        
         if (@$id){
-                if (@$picture) {
-                    $sql = "UPDATE projects SET title=?, description=?, url_web=?, url_github=?,picture=? WHERE id=?";
-                    $db->prepare($sql)->execute([$title,$description, $picture, $url_web, $url_github, $id]);
+                if (isset($picture)) {
+                    $sql = "UPDATE projects SET title=?, description=?,picture=?,created_at=?, url_web=?, url_github=? WHERE id=?";
+                    $db->prepare($sql)->execute([$title, $description, $picture,$created_at, $url_web, $url_github, $id]);
                 } else {
                     $sql = "UPDATE projects SET title=?, description=?, url_web=?, url_github=? WHERE id=?";
                     $db->prepare($sql)->execute([$title, $description, $url_web, $url_github, $id]);
                 }
             
         }else {
-            echo "erreur dans la mise à jour";
+            echo "erreur d'aiguillage pas de Id pour la mise à jour";
         }
     }
     
@@ -44,17 +46,23 @@ class Project {
         $db->prepare($sql)->execute([$id]); 
         
     }
-    
-    public function select($id="*"){
+
+    public function select($id = "*", $col = "*")
+    {
         global $db;
         require_once 'connexion.php';
-        if ($id == "*"){
-            $sql = "SELECT * FROM projects";
+        if (!($col == "*")) {
+            $sql = "SELECT $col FROM projects WHERE id=$id";
             return $db->query($sql)->fetchAll();
-        }else{
-            $sql= "SELECT * FROM projects WHERE id=$id";
-            return $db->query($sql)->fetchAll();
-        }  
+        } else {
+            if ($id == "*"){
+                $sql = "SELECT $col FROM projects";
+                return $db->query($sql)->fetchAll();
+            }else{
+                $sql = "SELECT $col FROM projects WHERE id=$id";
+                return $db->query($sql)->fetchAll();
+            }
+        }
     }
     
     public function __contruct($data){

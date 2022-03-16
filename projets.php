@@ -33,18 +33,25 @@ if (@$_GET['id']){
         </nav>
     </header>
     <div class="container">
+
+        <?php if((count($projets)<1)) :?>
+        <h1>Aucun Projet Enregistré</H1>
+        <?php endif ?>
         <?php
-        foreach ($projets as $projet) : ?>
+            foreach ($projets as $projet) : ?>
         <a href="admin.php?id=<?=$projet['id']?>">
             <div class='projet'>
-                <h1> <?= $projet["title"] ?></h1>
+                <h2>
+                    <?= $projet["title"] ?></h2>
                 <h2>
                     <?= $projet["description"] ?>
                 </h2>
-                <img src='assets/upload/<?= $projet["picture"] ?>'>
+                <img src='assets/upload/<?=$projet["picture"] ?>'>
             </div>
         </a>
-        <a href="projets.php?id=<?=$projet['id']?>">effacer</a>
+        <a href="projets.php?id=<?=$projet['id']?>">
+            <img class="element" src="assets/upload/del.png">
+        </a>
         <?php endforeach; ?>
     </div>
 </body>

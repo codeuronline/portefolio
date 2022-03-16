@@ -1,28 +1,33 @@
 <?php
 require_once 'models/project.php';
-if (@$_GET['id']){
+if (@$_GET['id']) {
     $newProject = new Project;
-    $projets = $newProject->select(@$_GET['id']); 
-
+    $projets = $newProject->select(@$_GET['id']);
 }
 if (@$_POST) {
     $form = $_POST;
     if (isset($_FILES['picture']['tmp_name']) && is_uploaded_file($_FILES['picture']['tmp_name'])) {
-           
+        if (@$_POST['id']) {
+            $projetsbd = $newProject->select(@$_POST['id'],'picture');
+            
+            $picture = $projetsbd[0]['picture'];
+            var_dump($picture);
+        } else {
             $picture = $_FILES['picture']['name'];
-            var_dump($picture);      
-            $picture_tmp = $_FILES['picture']['tmp_name'];
-            $extension = substr($picture, strrpos($picture, '.'));
-            $form['picture'] =  $picture;
-            move_uploaded_file($picture_tmp, 'assets/upload/' . $form['picture']);
+            $extension = substr($picture, strrpos($picture, '.'));           
+        var_dump($picture);
+        }
+        $form['picture']= $picture;
+        $picture_tmp = $_FILES['picture']['tmp_name'];
+        move_uploaded_file($picture_tmp, 'assets/upload/' . $form['picture']);
     }
     $form['created_at'] = date('Ymd');
-    $newproject= new Project([]);
-    
-    if (@$_POST['flag']){
+    $newProject = new Project([]);
+
+    if (@$_POST['flag']) {
         $newProject->up($form);
-    }else{
-        $newproject->add($form);
+    } else {
+        $newProject->add($form);
     }
 } ?>
 <!DOCTYPE html>
@@ -53,19 +58,20 @@ if (@$_POST) {
                     <legend color="black">Projet dans la BD</legend>
                     <div class="gauche">
                         <label for="title">Nom:</label>
-                        <input type="text" placeholder="Nom du projet" name="title" value="<?=@$projets[0]['title']?>">
+                        <input type="text" placeholder="Nom du projet" name="title"
+                            value="<?= @$projets[0]['title'] ?>">
                         <label for="lienlocal">Lien du site:</label>
                         <input type="url" placeholder="lien vers le site" name="url_web"
-                            value="<?=@$projets[0]['url_web']?>">
+                            value="<?= @$projets[0]['url_web'] ?>">
                         <label for=" liengithub">Lien Github:</label>
                         <input type="url" placeholder="lien vers github" name="url_github"
-                            value="<?=@$projets[0]['url_github']?>">
+                            value="<?= @$projets[0]['url_github'] ?>">
                         <div class="card">
                             <label for="picture">
                                 <input class="inputimage" type="file" onchange="handleFiles(files)" id="picture"
                                     name="picture">
                                 <span id="preview"><img class="vignette"
-                                        src="<?=(@$projets[0]['picture'])? "assets/upload/".@$projets[0]['picture'] : "assets/upload/vide.jpg"?>"
+                                        src="<?= (@$projets[0]['picture']) ? "assets/upload/" . @$projets[0]['picture'] : "assets/upload/vide.jpg" ?>"
                                         alt="vide" srcset="">
                                 </span>
                             </label>
@@ -74,11 +80,11 @@ if (@$_POST) {
                     <div class="droite">
                         <label for="description">Description:</label>
                         <textarea name="description" id="description" cols="80" rows="10"
-                            value="<?=@$projets[0]['description']?>"><?=@$projets['description']?>
+                            value="<?=@$projets[0]['description']?>"><?=@$projets['description'] ?>
                         </textarea>
-                        <input type="hidden" name="id" value="<?=@$_GET['id']?>">
-                        <?php if (@$_GET['id']):?>
+                        <?php if (@$_GET['id']) : ?>
                         <input type="hidden" name="flag" value="update">
+                        <input type="hidden" name="id" value="<?= @$_GET['id'] ?>">
                         <?php endif ?>
                     </div>
                 </fieldset>
