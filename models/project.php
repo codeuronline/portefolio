@@ -12,7 +12,7 @@ class Project {
         global $db;
         require_once 'connexion.php';
         extract($data);
-        if (isset($id)){
+        if (!isset($id)){
             $sql = "INSERT INTO projects(id,title,description,picture,created_at,url_web,url_github) VALUES (NULL,?,?,?,?,?,?)";
             $db->prepare($sql)->execute([$title, $description, $picture, $created_at, $url_web, $url_github]);
         } else {

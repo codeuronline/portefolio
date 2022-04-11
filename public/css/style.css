@@ -5,7 +5,7 @@
   color: white;
 }
 
-a, a ::after {
+/* a, a ::after {
   text-decoration: none;
   color: white;
 }
@@ -13,38 +13,38 @@ a, a ::after {
 a:hover {
   text-decoration: none;
   color: brown;
-}
+} */
 
-.container {
+.cubeContainer {
   width: 300px;
   height: 300px;
   perspective: 1000px;
   margin: 100px auto 0;
 }
 
-.containerForm {
+/* .containerForm {
   background-image: url(../../assets/upload/6.jpg);
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-}
+} */
 
 img {
   width: 150px;
   height: 150px;
 }
 
-input[type=file] {
-  display: block;
-}
+/* input[type=file] { */
+  /* display: block; */
+/* } */
 
-form {
-  background-color: url(../../assets/upload/4.jpg);
-}
+/* form { */
+  /* background-color: url(../../assets/upload/4.jpg); */
+/* } */
 
 .droite {
   display: flex;
-  background-color: #141413;
+  background-color: rgb(20, 20, 19);
   flex-direction: column;
   justify-content: end;
   align-items: center;
@@ -57,7 +57,7 @@ form {
 .gauche {
   background-color: aqua;
   display: flex;
-  background-color: #181816;
+  background-color: rgb(24, 24, 22);
   flex-direction: column;
   justify-content: start;
   align-items: center;
@@ -80,7 +80,7 @@ fieldset {
   animation: spin 15s infinite linear;
 }
 
-button {
+/* button {
   border: 2px solid white;
   border-radius: 5px;
   color: white;
@@ -98,18 +98,9 @@ button :hover {
   text-decoration: none;
 }
 
-/*button .active{
-  color: brown;
-  text-decoration: none;
-}
-button :hover{
-color:blueviolet;
-border:2px solid white;
-text-decoration: none;
-}*/
 label {
-  text-align: center;
-}
+  text-align: center; */
+/* } */
 
 .face {
   position: absolute;
@@ -161,7 +152,7 @@ label {
   transform: rotateX(0deg) translateZ(150px);
 }
 
-header {
+/* header {
   align-items: center;
   justify-content: space-around;
   display: flex;
@@ -169,18 +160,7 @@ header {
   height: 45px;
   width: 100%;
   background-image: url(../../assets/upload/6.jpg);
-}
-
-nav {
-  justify-content: center;
-  align-items: center;
-}
-
-footer {
-  margin-bottom: 0px;
-  width: 100%;
-  height: 45px;
-}
+} */
 
 @keyframes spin {
   from {
