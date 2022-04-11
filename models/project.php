@@ -1,4 +1,4 @@
-<?php 
+<?php
 class Project {
     
     private $title;
@@ -12,16 +12,24 @@ class Project {
         global $db;
         require_once 'connexion.php';
         extract($data);
-        $sql = "INSERT INTO projects(id,title,description,picture,created_at,url_web,url_github) VALUES (NULL,?,?,?,?,?,?)";
-        $db->prepare($sql)->execute([$title,$description,$picture,$created_at,$url_web,$url_github]);
+        if (isset($id)){
+            $sql = "INSERT INTO projects(id,title,description,picture,created_at,url_web,url_github) VALUES (NULL,?,?,?,?,?,?)";
+            $db->prepare($sql)->execute([$title, $description, $picture, $created_at, $url_web, $url_github]);
+        } else {
+            if (isset($picture)) {
+                $sql = "UPDATE projects SET title=?, description=?,picture=?,created_at=?, url_web=?, url_github=? WHERE id=?";
+                $db->prepare($sql)->execute([$title, $description, $picture, $created_at, $url_web, $url_github, $id]);
+            } else {
+                $sql = "UPDATE projects SET title=?, description=?, url_web=?, url_github=? WHERE id=?";
+                $db->prepare($sql)->execute([$title, $description, $url_web, $url_github, $id]);
+            }
         
-        
+        }
     }
     
     public function up($data){
         global $db;
         require_once 'connexion.php';
-        var_dump($data);
         extract($data);
         
         if (@$id){
@@ -41,9 +49,12 @@ class Project {
     public function del($id){
         global $db;
         require_once 'connexion.php';
-        
+        $elementToDel = $this->select($id, 'picture');
         $sql = "DELETE FROM projects WHERE id=?";  
-        $db->prepare($sql)->execute([$id]); 
+        $db->prepare($sql)->execute([$id]);
+        if ($this->picture) {
+            unlink("assets/upload/" . $elementToDel);
+        }
         
     }
 
@@ -53,7 +64,7 @@ class Project {
         require_once 'connexion.php';
         if (!($col == "*")) {
             $sql = "SELECT $col FROM projects WHERE id=$id";
-            return $db->query($sql)->fetchAll();
+            return $db->query($sql)->fetch();
         } else {
             if ($id == "*"){
                 $sql = "SELECT $col FROM projects";
@@ -64,10 +75,12 @@ class Project {
             }
         }
     }
-    
-    public function __contruct($data){
+
+    public function __contruct(array $data)
+    {
         $this->hydrate($data);
         $this->add($data);
+        
     } 
     
     public function hydrate(array $data)

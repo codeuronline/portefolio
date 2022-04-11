@@ -1,6 +1,5 @@
 <?php
 
-
 require_once 'models/project.php';
 
 $newProject = new Project;

@@ -6,29 +6,28 @@ if (@$_GET['id']) {
 }
 if (@$_POST) {
     $form = $_POST;
-    if (isset($_FILES['picture']['tmp_name']) && is_uploaded_file($_FILES['picture']['tmp_name'])) {
+    if (@$_FILES['picture']['tmp_name'] && is_uploaded_file($_FILES['picture']['tmp_name'])) {
         if (@$_POST['id']) {
             $projetsbd = $newProject->select(@$_POST['id'],'picture');
-            
             $picture = $projetsbd[0]['picture'];
-            var_dump($picture);
+            $extension = substr($picture, strrpos($picture, '.'));           
+    
         } else {
             $picture = $_FILES['picture']['name'];
             $extension = substr($picture, strrpos($picture, '.'));           
-        var_dump($picture);
         }
-        $form['picture']= $picture;
+        $form['picture']= date('ymd').$picture;
         $picture_tmp = $_FILES['picture']['tmp_name'];
         move_uploaded_file($picture_tmp, 'assets/upload/' . $form['picture']);
     }
     $form['created_at'] = date('Ymd');
     $newProject = new Project([]);
 
-    if (@$_POST['flag']) {
+    /*if (@$_POST['flag']) {
         $newProject->up($form);
-    } else {
+    } else {*/
         $newProject->add($form);
-    }
+    //}
 } ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -42,7 +41,7 @@ if (@$_POST) {
 </head>
 <header>
     <nav>
-        <a href="index.php"><button>Présentation</button></a>
+        <button><a href="index.php">Présentation</a></button>
         <button><a href="projets.php"> Mes Projets</a></button>
         <button><a href="competences.php">Mes Compétences</a></button>
         <button><a href="contacter.php">Me Contacter</a></button>
@@ -80,10 +79,10 @@ if (@$_POST) {
                     <div class="droite">
                         <label for="description">Description:</label>
                         <textarea name="description" id="description" cols="80" rows="10"
-                            value="<?=@$projets[0]['description']?>"><?=@$projets['description'] ?>
+                            value="<?=@$projets[0]['description']?>"><?=@$projets[0]['description'] ?>
                         </textarea>
                         <?php if (@$_GET['id']) : ?>
-                        <input type="hidden" name="flag" value="update">
+                        <!--<input type="hidden" name="flag" value="update">-->
                         <input type="hidden" name="id" value="<?= @$_GET['id'] ?>">
                         <?php endif ?>
                     </div>
