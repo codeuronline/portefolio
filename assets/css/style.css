@@ -65,37 +65,37 @@ img {
 
 .top {
   text-align: center;
-  background-image: url(../../assets/upload/2.jpg);
+  background-image: url(../../assets/img/cote1.jpg);
   transform: rotateX(90deg) translateZ(150px);
 }
 
 .bottom {
   text-align: center;
-  background-image: url(../../assets/upload/6.jpg);
+  background-image: url(../../assets/img/cote2.jpg);
   transform: rotateX(-90deg) translateZ(150px);
 }
 
 .right {
   text-align: center;
-  background-image: url(../../assets/upload/3.jpg);
+  background-image: url(../../assets/img/cote3.jpg);
   transform: rotateY(90deg) translateZ(150px);
 }
 
 .left {
   text-align: center;
-  background-image: url(../../assets/upload/5.jpg);
+  background-image: url(../../assets/img/cote4.jpg);
   transform: rotateY(-90deg) translateZ(150px);
 }
 
 .front {
   text-align: center;
-  background-image: url(../../assets/upload/1.jpg);
+  background-image: url(../../assets/img/cote5.jpg);
   transform: rotateX(90deg) translateZ(150px);
 }
 
 .back {
   text-align: center;
-  background-image: url(../../assets/upload/6.jpg);
+  background-image: url(../../assets/img/cote6.jpg);
   transform: rotateX(0deg) translateZ(150px);
 }
 @keyframes spin {
