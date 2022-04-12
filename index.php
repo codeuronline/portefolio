@@ -119,7 +119,6 @@
                     <div class="face top">
                         <a href="admin.php">
                             <div class="face">
-
                                 Admin
                             </div>
                         </a>
@@ -143,9 +142,11 @@
 
                 <div class="section-title">
                     <h2>A propos</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <p>Expert dans le développement Web et Web Mobile. Professionnel doté d'un grand
+                        sens de l'organisation et d'une solide connaissance dans le domaine du Web, je
+                        désire évoluer au sein de ce secteur. Je sais m'intégrer sans difficultés dans de
+                        nouveaux contextes de travail grace à un véritable esprit d'équipe et à d'excellentes
+                        capacités d'écoute, de flexibilité, et fais preuve d'une grande autonomie</p>
                 </div>
 
                 <div class="row">
@@ -153,7 +154,7 @@
                         <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                        <h3>Développeur &amp; Informatique Full Stack</h3>
+                        <h3>Développeur Informatique Web et Web mobile</h3>
                         <p class="fst-italic">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore
@@ -185,9 +186,10 @@
                                         <span>Master</span>
                                     </li>
                                     <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
-                                        <span>jkasperski@free.fr</span>
+                                        <span>
+                                            <a href="mailto:jkasperski@free.fr">jkasperski@free.fr</a>
                                     </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Activité:</strong>
+                                    <li><i class=" bi bi-chevron-right"></i> <strong>Activité:</strong>
                                         <span>Développeur Informatique</span>
                                     </li>
                                 </ul>
@@ -268,18 +270,18 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Skills</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <h2>Compétences</h2>
+                    <p>Liste de Compétences et de mes soft-skill</p>
                 </div>
 
                 <div class="row skills-content">
 
-                    <div class="col-lg-6" data-aos="fade-up">
+                    <div class="col-lg-3" data-aos="fade-up">
+
+
 
                         <div class="progress">
-                            <span class="skill">HTML <i class="val">100%</i></span>
+                            <span class="skill">TWIG </span>
                             <div class="progress-bar-wrap">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
                                     aria-valuemax="100"></div>
@@ -287,29 +289,44 @@
                         </div>
 
                         <div class="progress">
-                            <span class="skill">CSS <i class="val">90%</i></span>
+                            <span class="skill">HTML </span>
                             <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
                                     aria-valuemax="100"></div>
                             </div>
                         </div>
 
                         <div class="progress">
-                            <span class="skill">JavaScript <i class="val">75%</i></span>
+                            <span class="skill">CSS/SASS </span>
                             <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <span class="skill">PHP </span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <span class="skill">JavaScript </span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
                                     aria-valuemax="100"></div>
                             </div>
                         </div>
 
                     </div>
 
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
 
                         <div class="progress">
-                            <span class="skill">PHP <i class="val">80%</i></span>
+                            <span class="skill">SQL</span>
                             <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
                                     aria-valuemax="100"></div>
                             </div>
                         </div>
