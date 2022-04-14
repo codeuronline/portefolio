@@ -82,8 +82,7 @@
     <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
         <div class="hero-container" data-aos="fade-in">
             <h1>Jeremie KASPERSKI</h1>
-            <p>Je suis <span class="typed"
-                    data-typed-items=" Un Alien Informatique, Heu... , Un Développeur Informatique Web, "></span>
+            <p>Je suis <span class="typed" data-typed-items=" Un Développeur Web, ...et web Mobile"></span>
             </p>
             <div class="cubeContainer">
                 <div class="cube">
