@@ -154,9 +154,7 @@
                     <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                         <h3>Développeur Informatique Web et Web mobile</h3>
                         <p class="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua.
+                            Ici information en sus
                         </p>
                         <div class="row">
                             <div class="col-lg-6">
@@ -194,11 +192,11 @@
                             </div>
                         </div>
                         <p>
-                            Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt
+                            <!-- Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt
                             adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
                             Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus
                             itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis
-                            culpa magni laudantium dolores.
+                            culpa magni laudantium dolores.  -->
                         </p>
                     </div>
                 </div>
@@ -366,24 +364,24 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Resume</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <h2>Résumé</h2>
+                    <p>
+                        <!--petit resumé -->
+                    </p>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-6" data-aos="fade-up">
                         <h3 class="resume-title">Sumary</h3>
                         <div class="resume-item pb-0">
-                            <h4>Alex Smith</h4>
+                            <h4>KASSPERSKI Jérémie</h4>
                             <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing
                                     and developing user-centered digital/print marketing material from initial concept
                                     to final, polished deliverable.</em></p>
                             <ul>
-                                <li>Portland par 127,Orlando, FL</li>
-                                <li>(123) 456-7891</li>
-                                <li>alice.barkley@example.com</li>
+                                <li>1 rue d'Alexandry,73000 CHAMBERY</li>
+                                <li>+33 6 16 84 45 22</li>
+                                <li>jkasperski@free.fr</li>
                             </ul>
                         </div>
 
@@ -446,17 +444,15 @@
 
                 <div class="section-title">
                     <h2>Portfolio</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <p>Différents projets mettant en evidence certain aspect de la programmation</p>
                 </div>
 
                 <div class="row" data-aos="fade-up">
                     <div class="col-lg-12 d-flex justify-content-center">
                         <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-card">Card</li>
+                            <li data-filter="*" class="filter-active">TOUS</li>
+                            <li data-filter=".filter-app">API</li>
+                            <li data-filter=".filter-card">Maquette</li>
                             <li data-filter=".filter-web">Web</li>
                         </ul>
                     </div>
@@ -574,8 +570,10 @@
 
                 <div class="section-title">
                     <h2>Projets</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
+                        quidem. Sit
+                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit
+                        suscipit alias
                         ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                 </div>
 
@@ -583,37 +581,43 @@
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
                         <div class="icon"><i class="bi bi-briefcase"></i></div>
                         <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
+                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas
+                            molestias
                             excepturi sint occaecati cupiditate non provident</p>
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon"><i class="bi bi-card-checklist"></i></div>
                         <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                        <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip
                             ex ea commodo consequat tarad limino ata</p>
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon"><i class="bi bi-bar-chart"></i></div>
                         <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit
+                            esse cillum
                             dolore eu fugiat nulla pariatur</p>
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
                         <div class="icon"><i class="bi bi-binoculars"></i></div>
                         <h4 class="title"><a href="">Magni Dolores</a></h4>
-                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                            qui officia
                             deserunt mollit anim id est laborum</p>
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
                         <div class="icon"><i class="bi bi-brightness-high"></i></div>
                         <h4 class="title"><a href="">Nemo Enim</a></h4>
-                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus
+                            qui blanditiis
                             praesentium voluptatum deleniti atque</p>
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
                         <div class="icon"><i class="bi bi-calendar4-week"></i></div>
                         <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-                        <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+                        <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam
+                            libero
                             tempore, cum soluta nobis est eligendi</p>
                     </div>
                 </div>
@@ -627,8 +631,10 @@
 
                 <div class="section-title">
                     <h2>Testimonials</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
+                        quidem. Sit
+                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit
+                        suscipit alias
                         ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                 </div>
 
@@ -639,8 +645,10 @@
                             <div class="testimonial-item" data-aos="fade-up">
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                    rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
+                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
+                                    suscipit
+                                    rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et.
+                                    Maecen aliquam,
                                     risus at semper.
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
@@ -654,8 +662,10 @@
                             <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                    cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
+                                    Export tempor illum tamen malis malis eram quae irure esse labore quem
+                                    cillum quid
+                                    cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat
+                                    irure amet
                                     legam anim culpa.
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
@@ -669,8 +679,10 @@
                             <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                    veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
+                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum
+                                    nulla quem
+                                    veniam duis minim tempor labore quem eram duis noster aute amet eram
+                                    fore quis sint
                                     minim.
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
@@ -684,8 +696,10 @@
                             <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                    fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
+                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export
+                                    minim
+                                    fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt
+                                    elit fore quem
                                     dolore labore illum veniam.
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
@@ -699,8 +713,10 @@
                             <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                    veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
+                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam
+                                    tempor noster
+                                    veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam
+                                    esse veniam
                                     culpa fore nisi cillum quid.
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
@@ -723,8 +739,10 @@
 
                 <div class="section-title">
                     <h2>Contact</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
+                        quidem. Sit
+                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit
+                        suscipit alias
                         ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                 </div>
 
